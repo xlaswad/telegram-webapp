@@ -20,13 +20,13 @@
 
 
 <script>
-    // Telegram WebApp Init
     const tg = window.Telegram.WebApp;
-    tg.expand(); // раскрыть на весь экран
+    tg.expand();
+    tg.ready();  // убирает окно приветствия Telegram
 
     function generateMultiplier() {
         const multiplierElement = document.getElementById('multiplier');
-        const randomValue = (Math.random() * 2 + 1).toFixed(2); // от 1.00 до 3.00
+        const randomValue = (Math.random() * 2 + 1).toFixed(2);
         multiplierElement.textContent = randomValue + "X";
     }
 </script>
